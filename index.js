@@ -60,8 +60,8 @@ app.get('/search', async (req, res) => {
     const searchText = req.body.searchText;
     // console.log(searchText);
     const results = await yt_api.search(searchText);
-    // console.log(results.content , "content");
-    res.status(200).json({data:results.content});
+    console.log(results , "reuslts content");
+    res.status(200).json({results});
 });
 
 app.get('/song/:id', async (req, res) => {
